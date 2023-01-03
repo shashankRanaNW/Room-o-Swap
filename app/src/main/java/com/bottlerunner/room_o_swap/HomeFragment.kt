@@ -1,6 +1,5 @@
 package com.bottlerunner.room_o_swap
 
-//TODO: fix on refresh functionality
 
 import android.os.Bundle
 import android.view.*
@@ -28,9 +27,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
 
-        binding.btnAddRequest.setOnClickListener{
-            Navigation.findNavController(view!!).navigate(R.id.action_homeFragment_to_addRequestFragment)
-        }
 
         binding.swipeRefresh.setOnRefreshListener {
             updateRVs()
@@ -42,6 +38,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
         binding.scrollView.setOnScrollChangeListener { view, i, i2, i3, i4 ->
             binding.btnAddRequest.extend()
+        }
+        binding.btnAddRequest.setOnClickListener{
+            Navigation.findNavController(view!!).navigate(R.id.action_homeFragment_to_addRequestFragment)
         }
         return binding.root
     }
@@ -57,11 +56,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         updateRVs()
         super.onStart()
     }
-
-//    override fun onResume() {
-//        updateRVs()
-//        super.onResume()
-//    }
 
     fun updateRVs(){
 //        showProgressDialog("Loading requests please wait")
@@ -110,7 +104,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
                                 Toast.LENGTH_SHORT
                             ).show()
                         } else {
-                            Toast.makeText(currContext,currUser.name + " , "+ R.string.cyka_blyat.toString()
+                            Toast.makeText(currContext,currUser.name + ", welcome"
                                 ,Toast.LENGTH_SHORT)
                             matchList = Database.makeMatchList(currUser)
                         }
@@ -121,17 +115,17 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
                     FirebaseAuth.getInstance().currentUser?.let { it1 ->
                         val user = Database.findUserById(it1.uid)
                         if (user != null) {
-                            binding.tvWelcome.text = "Priviet ${user.name}, welcome to Room-o-Swap"
+                            binding.tvWelcome.text = "Hello ${user.name}, welcome to Room-o-Swap"
                         }
                     }
 
 
                 } else {
-                    Toast.makeText(MainActivity(), it.exception.toString(), Toast.LENGTH_SHORT)
+                    Toast.makeText(currContext, it.exception.toString(), Toast.LENGTH_SHORT)
                         .show()
                 }
 
-//                hideProgressDialog()
+                binding.swipeRefresh.isRefreshing = false
             }
     }
 

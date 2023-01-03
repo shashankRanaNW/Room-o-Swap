@@ -15,7 +15,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="requesting_patience">o re user, ruk ja thahar ja</string>
-    <string name="cyka_blyat">сука блять</string>
+    <string name="tag_line">Choose your own locale</string>
     <string name="about_us">Hello I am Shashank and this is Room-o-Swap, a simple app you can use to swap your hostel room. \nFor any feedback or complaint, contact:</string>
     <string name="help">In home screen, you can see the hostels you have requests to, all the requests listed on the app, matches available to see your matches.</string>
 </resources>
