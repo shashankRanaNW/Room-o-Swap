@@ -21,3 +21,13 @@ You can see all the matches available on the app in Matches Available
 <img src ="https://user-images.githubusercontent.com/101785829/210546564-97a37449-7d93-4d1f-8c02-a041d16b7372.png" width ="200"/>
 
 See help section of app for more details.
+
+## Screenshots
+
+<img src = "https://user-images.githubusercontent.com/101785829/210589639-408f265d-bf0c-444e-b668-71f44ab70ebe.jpg" width = "300">
+
+<img src = "https://user-images.githubusercontent.com/101785829/210586401-96360f30-e501-4cb6-8ed1-c7cfa3a5bc89.jpg" width = "300">
+
+<img src = "https://user-images.githubusercontent.com/101785829/210586572-3fa0bde8-30cb-41ff-98c3-32605fda935e.jpg" width = "300">
+
+
