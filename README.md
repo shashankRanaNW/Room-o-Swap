@@ -4,7 +4,8 @@ With this app you can swap your rooms with others on the app.
 
 ---
 
-You can see people who you your demand and request match with in You Matches section
+You can see people who you your demand and request match with in You Matches section. <br>
+
 <img src ="https://user-images.githubusercontent.com/101785829/210546445-1299a1aa-bd8f-4fb8-a8ec-edcde3799e3d.png" width ="200"/>
 
 ---
